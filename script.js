@@ -12,10 +12,26 @@ const currentFeels = document.querySelector('.currentFeels');
 //forecast data
 
 //today
-
+const todayIcon = document.querySelector('.todayIcon');
+const todayText = document.querySelector('.todayText');
+const todayRain = document.querySelector('.todayRain');
+const todayHumidity = document.querySelector('.todayHumidity')
+const todayMin = document.querySelector('.todayMin');
+const todayMax = document.querySelector('.todayMax');
 //tomorrow
-
+const tomorrowIcon = document.querySelector('.tomorrowIcon');
+const tomorrowText = document.querySelector('.tomorrowText');
+const tomorrowRain = document.querySelector('.tomorrowRain');
+const tomorrowHumidity = document.querySelector('.tomorrowHumidity');
+const tomorrowMin = document.querySelector('.tomorrowMin');
+const tomorrowMax = document.querySelector('.tomorrowMax');
 //third day
+const thirdIcon = document.querySelector('.thirdIcon');
+const thirdText = document.querySelector('.thirdText');
+const thirdRain = document.querySelector('.thirdRain');
+const thirdHumidity = document.querySelector('.thirdHumidity');
+const thirdMin = document.querySelector('.thirdMin');
+const thirdMax = document.querySelector('.thirdMax');
 
 async function weatherData(location) {
     const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=9e97e3eef3a742f485f164452231307&q=${location}&days=3&aqi=yes&alerts=no`, {mode: 'cors'});
@@ -75,6 +91,27 @@ function populateDOM(current, forecast) {
     currentHumiditiy.textContent = current.humidity;
     currentTemp.textContent = current.temp;
     currentFeels.textContent = current.feelsLike;
+
+    todayIcon.src = forecast.today.condition.icon;
+    todayText.textContent = forecast.today.condition.text;
+    todayRain.textContent = forecast.today.rain;
+    todayHumidity.textContent = forecast.today.humidity;
+    todayMin.textContent = forecast.today.mintemp;
+    todayMax.textContent = forecast.today.maxtemp;
+
+    tomorrowIcon.src = forecast.tomorrow.condition.icon;
+    tomorrowText.textContent = forecast.tomorrow.condition.text;
+    tomorrowRain.textContent = forecast.tomorrow.rain;
+    tomorrowHumidity.textContent = forecast.tomorrow.humidity;
+    tomorrowMin.textContent = forecast.tomorrow.mintemp;
+    tomorrowMax.textContent = forecast.tomorrow.maxtemp;
+
+    thirdIcon.src = forecast.third.condition.icon;
+    thirdText.textContent = forecast.third.condition.text;
+    thirdRain.textContent = forecast.third.rain;
+    thirdHumidity.textContent = forecast.third.humidity;
+    thirdMin.textContent = forecast.third.mintemp;
+    thirdMax.textContent = forecast.third.maxtemp;
 
 }
 
