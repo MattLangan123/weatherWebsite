@@ -18,7 +18,7 @@ const currentFeels = document.querySelector('.currentFeels');
 //third day
 
 async function weatherData(location) {
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=9e97e3eef3a742f485f164452231307&q=${location}&days=3&aqi=yes&alerts=no`, {mode: 'cors'});
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=9e97e3eef3a742f485f164452231307&q=${location}&days=3&aqi=yes&alerts=no`, {mode: 'cors'});
     let weather = await response.json();
     let forecast = forecastData(weather);
     let current = currentData(weather);
