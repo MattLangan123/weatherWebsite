@@ -1,5 +1,5 @@
 const currentLocation = document.querySelector('.location')
-currentLocation.textContent = "New York"
+currentLocation.textContent = "New York, United States of America"
 
 //current data DOM elements
 const lastUpdate = document.querySelector('.lastUpdate');
@@ -38,7 +38,6 @@ async function weatherData(location) {
     let weather = await response.json();
     let forecast = forecastData(weather);
     let current = currentData(weather);
-    currentLocation.textContent = location;
     populateDOM(current, forecast);
 }
 
@@ -81,7 +80,7 @@ function currentData(data) {
         feelsLike: data.current.feelslike_f,
         humidity: data.current.humidity
     }
-    console.log(current)
+    currentLocation.textContent = data.location.name + ", " + data.location.country;
     return current
 }
 
