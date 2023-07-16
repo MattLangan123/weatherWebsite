@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form>
+        <label for="location">Location:</label>
+        <input type="text" id="location" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="current">
+        <div class="location"></div>
+        <div currentContainer>
+            <div class="lastUpdate"></div>
+            <div class="currentCondition">
+                <img class="currentIcon" src="" alt="">
+                <div class="currentText"></div>
+            </div>
+            <div class="currentStats">
+                <div class="currentHumidity"></div>
+                <div class="currentTemp"></div>
+                <div class="currentFeels"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="forecast">
+        <div class="container">
+            <div class="today date"></div>
+            <div class="box">
+                <div class="todayCondition forecastCondition">
+                    <div class="todayIcon mainIcon"></div>
+                    <div class="todayText mainText"></div>
+                </div>
+                <div class="todayStats forecastStats">
+                    <div class="todayRain"></div>
+                    <div class="todayHumidity"></div>
+                    <div class="todayMin"></div>
+                    <div class="todayMax"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="tomorrow date"></div>
+            <div class="box">
+                <div class="tomorrowCondition forecastCondition">
+                    <div class="tomorrowIcon mainIcon"></div>
+                    <div class="tomorrowText mainText"></div>
+                </div>
+                <div class="tomorrowStats forecastStats">
+                    <div class="tomorrowRain"></div>
+                    <div class="tomorrowHumidity"></div>
+                    <div class="tomorrowMin"></div>
+                    <div class="tomorrowMax"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="third date"></div>
+            <div class="box">
+                <div class="thirdCondition">
+                    <div class="thirdIcon mainIcon"></div>
+                    <div class="thirdText mainIcon"></div>
+                </div>
+                <div class="thirdStats forecastStats">
+                    <div class="thirdRain"></div>
+                    <div class="thirdHumidity"></div>
+                    <div class="thirdMin"></div>
+                    <div class="thirdMax"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
