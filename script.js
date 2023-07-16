@@ -38,6 +38,7 @@ async function weatherData(location) {
     let weather = await response.json();
     let forecast = forecastData(weather);
     let current = currentData(weather);
+    currentLocation.textContent = location;
     populateDOM(current, forecast);
 }
 
