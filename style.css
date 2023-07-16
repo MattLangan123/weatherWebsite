@@ -1,0 +1,33 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 6fr 2fr
+}
+
+.header {
+    display: flex;
+    margin-left: auto;
+    margin-right: 10px;
+    align-items: center;
+    gap: 5px;
+}
+
+.current {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.forecast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
