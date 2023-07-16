@@ -69,9 +69,13 @@ function currentData(data) {
 }
 
 function populateDOM(current, forecast) {
-    lastUpdate.textContent = current.lastUpdate
-    currentIcon.src = current.condition.icon
-    currentText.textContent = current.condition.text
+    lastUpdate.textContent = current.lastUpdate;
+    currentIcon.src = current.condition.icon;
+    currentText.textContent = current.condition.text;
+    currentHumiditiy.textContent = current.humidity;
+    currentTemp.textContent = current.temp;
+    currentFeels.textContent = current.feelsLike;
+
 }
 
 weatherData("New York")
