@@ -1,5 +1,7 @@
-const currentLocation = document.querySelector('.location')
-currentLocation.textContent = "New York, United States of America"
+const currentLocation = document.querySelector('.locationCity')
+const currentCountry = document.querySelector('.locationCountry')
+currentLocation.textContent = "New York"
+currentCountry.textContent = "Unites States of America"
 
 //current data DOM elements
 const lastUpdate = document.querySelector('.lastUpdate');
@@ -80,7 +82,8 @@ function currentData(data) {
         feelsLike: data.current.feelslike_f,
         humidity: data.current.humidity
     }
-    currentLocation.textContent = data.location.name + ", " + data.location.country;
+    currentLocation.textContent = data.location.name;
+    currentCountry.textContent = data.location.country;
     return current
 }
 
