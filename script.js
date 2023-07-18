@@ -14,6 +14,7 @@ const currentFeels = document.querySelector('.currentFeels');
 //forecast data
 
 //today
+const todayDate = document.querySelector('.todayDate');
 const todayIcon = document.querySelector('.todayIcon');
 const todayText = document.querySelector('.todayText');
 const todayRain = document.querySelector('.todayRain');
@@ -21,6 +22,7 @@ const todayHumidity = document.querySelector('.todayHumidity')
 const todayMin = document.querySelector('.todayMin');
 const todayMax = document.querySelector('.todayMax');
 //tomorrow
+const tomorrowDate = document.querySelector('.tomorrowDate');
 const tomorrowIcon = document.querySelector('.tomorrowIcon');
 const tomorrowText = document.querySelector('.tomorrowText');
 const tomorrowRain = document.querySelector('.tomorrowRain');
@@ -28,6 +30,7 @@ const tomorrowHumidity = document.querySelector('.tomorrowHumidity');
 const tomorrowMin = document.querySelector('.tomorrowMin');
 const tomorrowMax = document.querySelector('.tomorrowMax');
 //third day
+const thirdDate = document.querySelector('.thirdDate')
 const thirdIcon = document.querySelector('.thirdIcon');
 const thirdText = document.querySelector('.thirdText');
 const thirdRain = document.querySelector('.thirdRain');
@@ -95,6 +98,7 @@ function populateDOM(current, forecast) {
     currentTemp.textContent = "Temp: " + current.temp + "F";
     currentFeels.textContent = "Feels like: " + current.feelsLike + "F";
 
+    todayDate.textContent = forecast.today.date;
     todayIcon.src = forecast.today.condition.icon;
     todayText.textContent = forecast.today.condition.text;
     todayRain.textContent = forecast.today.rain;
@@ -102,6 +106,7 @@ function populateDOM(current, forecast) {
     todayMin.textContent = forecast.today.mintemp;
     todayMax.textContent = forecast.today.maxtemp;
 
+    tomorrowDate.textContent = forecast.tomorrow.date;
     tomorrowIcon.src = forecast.tomorrow.condition.icon;
     tomorrowText.textContent = forecast.tomorrow.condition.text;
     tomorrowRain.textContent = forecast.tomorrow.rain;
@@ -109,6 +114,7 @@ function populateDOM(current, forecast) {
     tomorrowMin.textContent = forecast.tomorrow.mintemp;
     tomorrowMax.textContent = forecast.tomorrow.maxtemp;
 
+    thirdDate.textContent = forecast.third.date;
     thirdIcon.src = forecast.third.condition.icon;
     thirdText.textContent = forecast.third.condition.text;
     thirdRain.textContent = forecast.third.rain;
