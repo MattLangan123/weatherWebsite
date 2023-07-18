@@ -91,7 +91,7 @@ function currentData(data) {
 }
 
 function populateDOM(current, forecast) {
-    lastUpdate.textContent = "Last Update: " + current.lastUpdate;
+    lastUpdate.textContent = current.lastUpdate;
     currentIcon.src = current.condition.icon;
     currentText.textContent = current.condition.text;
     currentHumiditiy.textContent = "Humidity: " + current.humidity;
