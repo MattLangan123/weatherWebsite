@@ -69,6 +69,16 @@ body {
 }
 
 .box {
-    display: flex;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1f 1fr;
+    gap: 5px;
+    text-align: center;
+}
+
+.forecastCondition {
+    grid-column: 1/2;
+}
+
+.forecastStats {
+    grid-column: 2/3;
 }
