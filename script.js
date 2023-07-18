@@ -88,12 +88,12 @@ function currentData(data) {
 }
 
 function populateDOM(current, forecast) {
-    lastUpdate.textContent = current.lastUpdate;
+    lastUpdate.textContent = "Last Update: " + current.lastUpdate;
     currentIcon.src = current.condition.icon;
     currentText.textContent = current.condition.text;
-    currentHumiditiy.textContent = current.humidity;
-    currentTemp.textContent = current.temp;
-    currentFeels.textContent = current.feelsLike;
+    currentHumiditiy.textContent = "Humidity: " + current.humidity;
+    currentTemp.textContent = "Temp: " + current.temp + "F";
+    currentFeels.textContent = "Feels like: " + current.feelsLike + "F";
 
     todayIcon.src = forecast.today.condition.icon;
     todayText.textContent = forecast.today.condition.text;
