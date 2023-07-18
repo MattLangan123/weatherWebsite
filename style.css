@@ -45,11 +45,30 @@ body {
 .currentContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.currentCondition {
     text-align: center;
 }
 
+.lastUpdate {
+    text-align: right;
+}
+
 .forecast {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.box {
+    display: flex;
+    gap: 10px;
 }
